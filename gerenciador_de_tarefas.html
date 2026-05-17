@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name=" author" content="Elias joão do Nascimento jr">
+  <title>Gerenciador de Tarefas</title>
+  <link rel="stylesheet" href="Css/styles.css">
+  <link rel="icon" type="image/x-icon " href="Imagens/Favicon-cx2.png">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Gerenciador de Tarefas </h1>
+        <div style="color:var(--muted);font-size:13px">As tarefas ficam no LocalStorage do navegador.</div>
+      </div>
+      <div>
+        <button id="btn-notif" class="btn-ghost small">Ativar notificações</button>
+      </div>
+    </header>
+
+    <section class="card">
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <textarea id="taskText" rows="3" placeholder="Crie uma tarefa, ou digite um assunto do e-mail / número do chamado"></textarea>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <button id="addBtn">Adicionar</button>
+          <button id="showAllBtn" class="btn-ghost">Mostrar todas</button>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;color:var(--muted);font-size:13px">Regras automáticas:
+        <ul>
+          <li>Ao criar, a data é registrada automaticamente.</li>
+          <li>Cada vez que a página abrir ela verifica se a tarefa tem <strong>7 dias ou mais</strong> e a marca como <em>overdue</em> (alerta).</li>
+          <li>Ao marcar <strong>Concluído</strong>, a tarefa fica vermelha e dispara um alerta no navegador.</li>
+          <li>Você pode verificar o assunto do e-mail inserido ou o número do chamado".</li>
+        </ul>
+      </div>
+
+      <div class="tasks" id="tasksContainer"></div>
+    </section>
+
+    <footer>
+      © 2025 | Todos os direitos reservados. Desenvolvido pelo grupo HNG Systems 
+      <!--salva no LocalStorage e permite notificações para receber alertas diários.-->
+    </footer>
+  </div>
+<script src="Js/gerenciador.js"></script>
+</body>
+</html>
