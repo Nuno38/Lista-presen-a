@@ -1,0 +1,37 @@
+:root{
+      --bg:#f4f7fb;
+      --card:#ffffff;
+      --muted:#7b8aa3;
+      --accent:#556bfb;
+      --accent-2:#7cc7d9;
+      --danger:#ff4d4f;
+      --success:#2db84d;
+      font-family: Inter, Roboto, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#eef6ff);min-height:100vh;color:#213244}
+    .wrap{ max-width:980px;margin:136px auto;padding:24px}
+    header{margin-top:20px; display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    h1{margin:0;font-size:20px}
+    .card{background:var(--card);border-radius:14px;box-shadow:0 6px 20px rgba(18,40,80,0.06);padding:18px}
+
+    .form-row{display:flex;gap:12px}
+    textarea,input{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(33,50,68,0.08);font-size:14px;resize:none}
+    button{padding:10px 14px;border-radius:10px;border:0;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;font-weight:600;cursor:pointer}
+    .btn-ghost{background:transparent;border:1px solid rgba(33,50,68,0.06);color:var(--muted)}
+
+    .tasks{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+    .task{padding:14px;border-radius:12px;border:1px solid rgba(33,50,68,0.04);background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(250,255,255,0.9));position:relative}
+    .task h3{margin:0 0 6px 0;font-size:15px}
+    .meta{font-size:12px;color:var(--muted)}
+    .controls{display:flex;gap:8px;margin-top:10px}
+    .small{font-size:13px;padding:8px 10px;border-radius:8px}
+
+    .badge{position:absolute;right:12px;top:12px;padding:6px 8px;border-radius:8px;font-size:12px;background:rgba(85,107,251,0.12);color:var(--accent)}
+    .overdue{background:rgba(255,77,79,0.1);color:var(--danger)}
+    .completed h3{color:var(--danger);text-decoration:line-through}
+    .btn-ghost{color: #111111;}
+
+    footer{margin-top:120px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media(max-width:480px){.form-row{flex-direction:column}.tasks{grid-template-columns:1fr}}
